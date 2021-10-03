@@ -31,3 +31,6 @@ By default, unity builder won't run if the branch is 'dirty' this means that you
   
 To enable the ability to build manually (without having to push), uncomment line 19 in [main.yml](.github/workflows/main.yml).  
 
+## Post-Setup
+
+After setup you should delete this README file in favor of your own, the images folder can also be deleted.  
