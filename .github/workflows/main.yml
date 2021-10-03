@@ -1,0 +1,50 @@
+# ======================== Build To Pages ========================
+# Take the Unity project in a repo and build it to WebGL 
+# Then, deploy it to github pages
+#
+# By: https://github.com/bwc9876
+# ================================================================
+
+name: Build To Pages
+
+on:
+  push:
+    branches: [ main ] # Run when we push to the main branch
+    paths-ignore: # Don't run if only these files were changed, as they don't pertain to how the game runs
+      - ".github/**"
+      - "*.md"
+      - ".gitignore"
+      - ".gitattributes"
+      - ".env"
+  #workflow_dispatch: # Uncomment to allow for manual runnning
+
+jobs:
+
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout ⬇️ # Grab our repo
+        uses: actions/checkout@v2
+      
+      - name: Cache Library 📝 # We cache the library folder so that way it takes less time to run in subsequent builds
+        uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library
+          restore-keys: Library
+
+      - name: Build To WebGL 🛠️ # Use the Unity Builder action to build to WebGL
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }} # You'll have to set this up on your own (https://game.ci/docs/github/activation)
+        with:
+          targetPlatform: WebGL
+          unityVersion: 2020.3.12f1 # Replace with your unity version (find it in ProjectSettings/ProjectVersion.txt)
+          #allowDirtyBuild: true # Uncomment if you want to force the build
+
+      - name: Deploy To Pages 🚀 # Deploy the build to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages 
+          folder: build/WebGL/WebGL
