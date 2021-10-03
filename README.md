@@ -14,9 +14,13 @@ Changing versions will require you to repeat this step!
 ### License
 
 Now, go to the "Actions" tab of this repo and select "Acquire activation file" in the left plane and click "Run workflow", the nrun it on the main branch. This will create a license request file as an artifact, to access this file click "Acquire Activation file" in the list of actions, and wait for the action to complete  
-![Run Acquire activation action](/images/run-license-action.png "Run the action on the mian branch")  
+  
+![Run Acquire activation action](/images/run-license-action.png "Run the action on the main branch")  
+  
 If all goes well, there should an artifact available to download with the name you.unity.version.alf, download this file to your local machine.  
+  
 ![Download artifact](/images/download-artifact.png "Look for Artifacts at the bottom")  
+  
 Once downloaded, head to https://license.unity3d.com/manual.  There, you will upload your .alf file, and retrieve a .ulf file. Now you need to go to the Settings tab of your repo, click on "Secrets" on the right, and add a secret names "UNITY_LICENSE" with the contents of your .ulf file. This will allow the unity builder action to run unity installations.  
 
 After this step is done, it is safe to delete [activate.yml](.github/workflows/activate.yml)
