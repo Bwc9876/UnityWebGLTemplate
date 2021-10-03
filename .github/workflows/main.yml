@@ -16,6 +16,7 @@ on:
       - ".gitignore"
       - ".gitattributes"
       - ".env"
+      - "images/**"
   #workflow_dispatch: # Uncomment to allow for manual runnning
 
 jobs:
