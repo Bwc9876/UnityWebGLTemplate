@@ -1,11 +1,13 @@
 # UnityWebGLTemplate
 
-A template repo you can use to push your WebGL games to GitHub pages.
+A template repo you can use to push your WebGL games to GitHub pages.  
 
 Uses:
 - [Unity Builder](https://github.com/marketplace/actions/unity-builder)
 - [Unity License Activation](https://github.com/marketplace/actions/unity-request-activation-file)
-- [Deploy to Pages](https://github.com/marketplace/actions/deploy-to-github-pages)
+- [Deploy to Pages](https://github.com/marketplace/actions/deploy-to-github-pages)  
+
+[Example Repo](https://github.com/Bwc9876/UnityWebGL)
 
 ## How it Works
 
