@@ -39,8 +39,6 @@ Now the unity project folder and the git repo folder have been merged successful
 
 First things first, you're going to want to go to [activate.yml](.github/workflows/activate.yml) and edit "unityVersion" on line 13 to your target unity version.  
 You're also going to want to do this in [main.yml](.github/workflows/main.yml) on line 44.  
-  
-Changing versions will require you to repeat this step!
 
 ### License
 
@@ -48,14 +46,16 @@ Now, go to the "Actions" tab of this repo and select "Acquire activation file" i
   
 ![Run Acquire activation action](/images/run-license-action.png "Run the action on the main branch")  
   
-If all goes well, there should be an artifact available to download with the name you.unity.version.alf, download this file to your local machine.  
+If all goes well, there should be an artifact available to download with the name Unity.your_unity_version.alf, download this file to your local machine.  
   
 ![Download artifact](/images/download-artifact.png "Look for Artifacts at the bottom")  
   
 Once downloaded, head to https://license.unity3d.com/manual.  There, you will upload your .alf file, and retrieve a .ulf file. Now you need to go to the Settings tab of your repo, click on "Secrets" on the right, and add a secret named "UNITY_LICENSE" with the contents of your .ulf file. This will allow the unity builder action to run unity installations.  
 
-After this step is done, it is safe to delete [activate.yml](.github/workflows/activate.yml)
-
+After this step is done, it is safe to delete [activate.yml](.github/workflows/activate.yml)  
+  
+Changing versions will require you to repeat this step!  
+  
 ## Config
 
 By default, unity builder won't run if the branch is 'dirty' this means that you've directly edited the main branch and didn't use a Pull Request. to mitigate this, uncomment line 45 in [main.yml](.github/workflows/main.yml).    
