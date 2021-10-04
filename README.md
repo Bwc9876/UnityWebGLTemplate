@@ -73,4 +73,5 @@ After setup you should delete this README file in favor of your own, the images 
 [Integrate a Testing Suite](https://game.ci/docs/github/test-runner)  
 [Setup your own Runner for Faster Builds](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners)  
 [Use a custom pull-request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)  
-[Use Git LFS (Edit your .gitattributes)](https://gist.github.com/webbertakken/ff250a0d5e59a8aae961c2e509c07fbc)
+[Use Git LFS (Edit your .gitattributes)](https://gist.github.com/webbertakken/ff250a0d5e59a8aae961c2e509c07fbc)  
+[Add a Status Badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
