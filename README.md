@@ -37,8 +37,8 @@ Now the unity project folder and the git repo folder have been merged successful
 
 ### Versions  
 
-First things first, you're going to want to go to [activate.yml](.github/workflows/activate.yml) and edit "unityVersion" on line 13 to your target unity version.  
-You're also going to want to do this in [main.yml](.github/workflows/main.yml) on line 44.  
+First things first, you're going to want to go to [activate.yml](.github/workflows/activate.yml#L13) and edit "unityVersion" on line 13 to your target unity version.  
+You're also going to want to do this in [main.yml](.github/workflows/main.yml#L44) on line 44.  
 
 ### License
 
@@ -58,9 +58,9 @@ Changing versions will require you to repeat this step!
   
 ## Config
 
-By default, unity builder won't run if the branch is 'dirty' this means that you've directly edited the main branch and didn't use a Pull Request. to mitigate this, uncomment line 45 in [main.yml](.github/workflows/main.yml).    
+By default, unity builder won't run if the branch is 'dirty' this means that you've directly edited the main branch and didn't use a Pull Request. to mitigate this, uncomment line 45 in [main.yml](.github/workflows/main.yml#L45).    
   
-To enable the ability to build manually (without having to push), uncomment line 20 in [main.yml](.github/workflows/main.yml).  
+To enable the ability to build manually (without having to push), uncomment line 20 in [main.yml](.github/workflows/main.yml#L20).  
 
 ## Post-Setup
 
