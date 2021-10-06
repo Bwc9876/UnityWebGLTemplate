@@ -50,7 +50,7 @@ If all goes well, there should be an artifact available to download with the nam
   
 ![Download artifact](/images/download-artifact.png "Look for Artifacts at the bottom")  
   
-Once downloaded, head to https://license.unity3d.com/manual.  There, you will upload your .alf file, and retrieve a .ulf file. Now you need to go to the Settings tab of your repo, click on "Secrets" on the right, and add a secret named "UNITY_LICENSE" with the contents of your .ulf file. This will allow the unity builder action to run unity installations.  
+Once downloaded, head to https://license.unity3d.com/manual.  There, you will upload your .alf file, and retrieve a .ulf file. Now you need to go to the Settings tab of your repo, click on "Secrets" on the left, and add a secret named "UNITY_LICENSE" with the contents of your .ulf file. This will allow the unity builder action to run unity installations.  
 
 After this step is done, it is safe to delete [activate.yml](.github/workflows/activate.yml)  
   
