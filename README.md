@@ -62,7 +62,7 @@ Now that your Unity license is setup, make a PR and merge it to your main branch
   
 ## Config
 
-By default, unity builder won't run if the branch is 'dirty' this means that you've directly edited the main branch and didn't use a Pull Request. to mitigate this, uncomment line 45 in [main.yml](.github/workflows/main.yml#L45).    
+By default, unity builder won't run if the branch is 'dirty'. This means that you've directly edited the main branch and didn't use a Pull Request. to mitigate this, uncomment line 45 in [main.yml](.github/workflows/main.yml#L45).    
   
 To enable the ability to build manually (without having to push), uncomment line 20 in [main.yml](.github/workflows/main.yml#L20).  
 
