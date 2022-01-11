@@ -11,7 +11,7 @@ Uses:
 
 ## How it Works
 
-Whenever you merge a PR request, GitHub will automatically compile your game using unity to WebGL, the resulting build files will then be pushed to the gh-pages branch.
+Whenever you merge a pull request, GitHub will automatically compile your game using Unity to WebGL, the resulting build files will then be pushed to the gh-pages branch.
 
 ## Setup
 
@@ -55,6 +55,10 @@ Once downloaded, head to https://license.unity3d.com/manual.  There, you will up
 After this step is done, it is safe to delete [activate.yml](.github/workflows/activate.yml)  
   
 Changing versions will require you to repeat this step!  
+
+## Try It Out
+
+Now that your Unity license is setup, make a PR and merge it to your main branch, as long as the PR affects the game (stuff like the README and .gitignore won't trigger a build) the build action will start. Once the action finishes, open the page through the "deployments" section on the right side.
   
 ## Config
 
