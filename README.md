@@ -56,6 +56,12 @@ After this step is done, it is safe to delete [activate.yml](.github/workflows/a
   
 Changing versions will require you to repeat this step!  
 
+## Important note about compression
+
+GitHub pages does not allow for you to configure HTTP response headers for compression; so, you'll need to disable it in player settings.  
+Head to `Edit > Project Settings > Player > Scroll down to "other settings" > Click the dropdown labelled "Compression Format" and select "Disabled"`.  
+Also check the `Decompression Fallback` option.
+
 ## Try It Out
 
 Now that your Unity license is setup, make a PR and merge it to your main branch, as long as the PR affects the game (stuff like the README and .gitignore won't trigger a build) the build action will start. Once the action finishes, open the page through the "deployments" section on the right side.
